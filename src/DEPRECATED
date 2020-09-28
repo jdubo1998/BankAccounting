@@ -1,0 +1,91 @@
+        GridBagConstraints c1 = new GridBagConstraints();
+        GridBagConstraints c2 = new GridBagConstraints();
+        GridBagConstraints c3 = new GridBagConstraints();
+        GridBagConstraints c4 = new GridBagConstraints();
+        
+        /* Overview */
+        c1.fill = GridBagConstraints.HORIZONTAL;
+        c1.anchor = GridBagConstraints.PAGE_START;
+        c1.weightx = 1;
+        c1.weighty = 1;
+        c1.insets = new Insets(5, 5, 5, 5);
+//        c1.ipady = 20;
+        c1.gridx = 0;
+        c1.gridy = 0;
+        c1.gridwidth = 2;
+        overview.add(new Label("Overview", Label.CENTER), c1);
+        
+        /* Filters */
+        c2.fill = GridBagConstraints.HORIZONTAL;
+        c2.anchor = GridBagConstraints.PAGE_START;
+        c2.weightx = 1;
+        c2.weighty = 1;
+        c2.insets = new Insets(5, 5, 5, 5);
+        c2.gridx = 0;
+        c2.gridy = 0;
+        c2.gridwidth = 2;
+        filterButtons.add(new Label("Filters", Label.CENTER), c2);
+        c2.gridwidth = 1;
+        c2.gridx = 0;
+        c2.gridy = 1;
+        filterButtons.add(allTrans, c2);
+        c2.gridwidth = 1;
+        c2.gridx = 1;
+        c2.gridy = 1;
+        filterButtons.add(thisMonth, c2);
+        c2.gridwidth = 1;
+        c2.gridx = 0;
+        c2.gridy = 2;
+        filterButtons.add(monthsTotals, c2);
+        c2.gridwidth = 1;
+        c2.gridx = 1;
+        c2.gridy = 2;
+        filterButtons.add(paycheckTotals, c2); // END
+        c2.gridwidth = 2;
+        c2.gridx = 0;
+        c2.gridy = 3;
+        filterButtons.add(new Label(""), c2);
+        
+        /* Modify */
+        c3.fill = GridBagConstraints.HORIZONTAL;
+        c3.anchor = GridBagConstraints.PAGE_START;
+        c3.weightx = 1;
+        c3.weighty = 1;
+        c3.gridwidth = 3;
+        c3.gridx = 0;
+        c3.gridy = 0;
+        modPanel.add(new Label("Modify", Label.CENTER), c3);
+        c3.gridwidth = 1;
+        c3.gridx = 0;
+        c3.gridy = 1;
+        modPanel.add(new Label("Memo: ", Label.CENTER), c3);
+        c3.gridwidth = 0;
+        c3.gridx = 1;
+        c3.gridy = 1;
+        modPanel.add(addActivityMemo, c3); 
+        c3.gridwidth = 1;
+        c3.gridx = 0;
+        c3.gridy = 2;
+        modPanel.add(new Label("Ammount: ", Label.CENTER), c3);
+        c3.gridwidth = 2;
+        c3.gridx = 1;
+        c3.gridy = 2;
+        modPanel.add(addActivityAmm, c3); // END 
+        c3.gridwidth = 3;
+        c3.gridx = 0;
+        c3.gridy = 3;
+        modPanel.add(new Label(""), c3);
+        c3.gridwidth = 3;
+        c3.gridx = 0;
+        c3.gridy = 4;
+        modPanel.add(addActivity, c3);
+        
+        /* Custom */
+        c4.fill = GridBagConstraints.HORIZONTAL;
+        c4.anchor = GridBagConstraints.PAGE_START;
+        c4.weightx = 1;
+        c4.weighty = 1;
+        c4.gridx = 0;
+        c4.gridy = 0;
+        c4.gridwidth = 2;
+        customFilter.add(new Label("Custom", Label.CENTER), c4);
